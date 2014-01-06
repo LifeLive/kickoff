@@ -19,6 +19,9 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
+# compiled files excluded - only on generation
+css/**/*.*
+js/dist
 
 # Random
 *.sublime-*

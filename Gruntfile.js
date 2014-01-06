@@ -62,11 +62,11 @@ module.exports = function (grunt) {
 					lineNumbers: false,
 					debugInfo : false,
 					precision : 8,
-					sourcemap : true
+					sourcemap: true
 				},
 				files: {
-					'css/<%=pkg.name%>.css': 'scss/kickoff.scss',
-					'css/<%=pkg.name%>-old-ie.css': 'scss/kickoff-old-ie.scss'
+					'css/temp/<%=pkg.name%>.sass.css': 'scss/kickoff.scss',
+					'css/temp/<%=pkg.name%>-old-ie.sass.css': 'scss/kickoff-old-ie.scss'
 				}
 			},
 			production: {
@@ -75,8 +75,8 @@ module.exports = function (grunt) {
 					precision : 8
 				},
 				files: {
-					'css/<%=pkg.name%>.css': 'scss/kickoff.scss',
-					'css/<%=pkg.name%>-old-ie.css': 'scss/kickoff-old-ie.scss'
+					'css/temp/<%=pkg.name%>.sass.css': 'scss/kickoff.scss',
+					'css/temp/<%=pkg.name%>-old-ie.sass.css': 'scss/kickoff-old-ie.scss'
 				}
 			},
 			styleguide: {
@@ -84,10 +84,10 @@ module.exports = function (grunt) {
 					unixNewlines: true,
 					style: 'expanded',
 					precision : 8,
-					sourcemap : true
+					sourcemap: true
 				},
 				files: {
-					'css/styleguide.css': 'scss/styleguide.scss'
+					'css/temp/styleguide.sass.css': 'scss/styleguide.scss'
 				}
 			}
 		},
@@ -135,8 +135,9 @@ module.exports = function (grunt) {
 		watch: {
 			scss: {
 				files: ['scss/**/*.scss'],
-				tasks: ['sass:dev', 'sass:styleguide']
-				// tasks: ['sass:dev', 'autoprefixer:dist', 'csso']
+				//tasks: ['sass:dev', 'sass:styleguide'],
+				//tasks: ['sass:dev', 'sass:styleguide', 'autoprefixer:dist', 'csso']
+				tasks: ['sass:dev', 'sass:styleguide', 'autoprefixer:dist']
 			},
 
 			js: {
@@ -168,11 +169,13 @@ module.exports = function (grunt) {
 					// Task-specific options go here - we are supporting
 					// the last 2 browsers, any browsers with >1% market share,
 					// and ensuring we support IE7 + 8 with prefixes
-					browsers: ['last 2 versions', '> 1%', 'ie 8', 'ie 7']
+					browsers: ['> 5%', 'last 2 versions', 'firefox > 3.6', 'ie > 7'],
+					map: true
 				},
 				files: {
-					'css/kickoff.prefixed.css': 'css/kickoff.css',
-					'css/kickoff-old-ie.prefixed.css': 'css/kickoff-old-ie.css'
+					'css/kickoff.css': 'css/temp/kickoff.sass.css',
+					'css/kickoff-old-ie.css': 'css/temp/kickoff-old-ie.sass.css',
+					'css/styleguide/styleguide.css': 'css/temp/styleguide.sass.css'
 				}
 			}
 		},
