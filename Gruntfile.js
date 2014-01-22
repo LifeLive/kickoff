@@ -205,7 +205,8 @@ module.exports = function (grunt) {
 					// port: 9001,
 					// hostname: 'mysite.local',
 					open: true,
-					livereload: true
+					livereload: true,
+					base: 'dist'
 				}
 			}
 		},
