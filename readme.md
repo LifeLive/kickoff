@@ -36,12 +36,18 @@ Don't want to use Kickoff?  We won't be offended.
 
 The framework is setup so that you can do this very easily.
 
+
 ### To replace the SCSS
-Delete the files in the SCSS folder, replacing them with your framework of choice.
+Delete the files in the /scss folder, replacing them with your framework of choice.
 
 Next, go into the `Gruntfile.js` in the root of the project and change all references of `kickoff.scss` and `kickoff.css` to whatever you have decided to call your main SCSS file.
 
 Finally, change the reference to the compiled CSS file in the `html_start.hbs` in `src/templates/includes`
+
+### To replace the JS
+Delete the files in the /js folder, replacing with your own structure.
+
+In the `Gruntfile.js` either change the references to your own JS files, or if you would like to add in your own JS grunt helpers – such as browserify or RequireJS – then add this in as you usually would to the project.
 
 
 ## Demos and documentation
