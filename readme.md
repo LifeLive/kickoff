@@ -4,7 +4,7 @@
 
 Kickoff Statix aims to make the process of creating static HTML templates quick and easy.
 
-It is primarily a simple setup of [Assemble](https://github.com/assemble/assemble), a static template generator, integrated with our minimal front-end framework, [Kickoff](http://tmwagency.github.io/kickoff/) and a few handy [Grunt](http://gruntjs.com/) setup tasks.
+It is primarily a simple setup of [Assemble](https://github.com/assemble/assemble), a static site generator, integrated with our minimal front-end framework, [Kickoff](http://tmwagency.github.io/kickoff/) and a few handy [Grunt](http://gruntjs.com/) setup tasks.
 
 Combined, this gives you a framework that allows the creation of much more maintainable, flexible front-end templates with virtually no setup required.
 
