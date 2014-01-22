@@ -32,6 +32,7 @@ module.exports = function (grunt) {
 	 */
 	grunt.initConfig({
 		pkg: require('./package'),
+		site: grunt.file.readYAML('src/data/site.yml'),
 
 
 		/**
@@ -126,6 +127,10 @@ module.exports = function (grunt) {
 			}
 		},
 
+		clean: {
+			all: ['dist/**/*.html']
+		},
+
 
 		/**
 		 * Watch
@@ -147,6 +152,14 @@ module.exports = function (grunt) {
 					'js/libs/**/*.js'
 				],
 				tasks: ['uglify']
+			},
+
+			assemble : {
+				files: ['src/templates/**/*.hbs', 'src/templates/**/*.md'],
+				tasks: ['clean', 'assemble', 'newer:copy'],
+				options: {
+					livereload: true
+				}
 			},
 
 			livereload: {
@@ -213,6 +226,62 @@ module.exports = function (grunt) {
 			}
 		},
 
+		assemble: {
+			options: {
+				data: 'src/**/*.{json,yml}',
+				assets: '<%= site.destination %>/assets',
+				helpers: ['helper-moment', 'handlebars-helper-eachitems', 'src/helpers/helper-*.js'],
+
+				partials: ['src/templates/includes/**/*.hbs'],
+				flatten: false,
+
+				layout: 'default.hbs',
+				layoutdir: 'src/templates/layouts'
+			},
+
+			default: {
+				files: [{
+					cwd: './src/templates/pages/',
+					dest: '<%= site.destination %>',
+					expand: true,
+					src: ['**/*.hbs']
+				}]
+			}
+		},
+
+
+		copy: {
+			dist: {
+				files: [
+					{ expand: true, cwd: './css', src: ['./**/*.*'], dest: 'dist/assets/css' },
+					{ expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' },
+					{ expand: true, cwd: './img', src: ['./**/*.*'], dest: 'dist/assets/img' },
+					{ expand: true, cwd: './fonts', src: ['./**/*.*'], dest: 'dist/assets/fonts' }
+				]
+			},
+			css: {
+				files: [
+					{ expand: true, cwd: './css', src: ['./**/*.*'], dest: 'dist/assets/css' }
+				]
+			},
+			img: {
+				files: [
+					{ expand: true, cwd: './img', src: ['./**/*.*'], dest: 'dist/assets/img' }
+				]
+			},
+			fonts: {
+				files: [
+					{ expand: true, cwd: './fonts', src: ['./**/*.*'], dest: 'dist/assets/fonts' }
+				]
+			},
+			js: {
+				files: [
+					{ expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
+				]
+			}
+		},
+
+
 		/**
 		 * Custom jQuery builder
 		 * Check build numbers at jquery.com
@@ -238,6 +307,7 @@ module.exports = function (grunt) {
 
 	// Load all the grunt tasks
 	require('load-grunt-tasks')(grunt);
+	grunt.loadNpmTasks('assemble');
 
 
 	/**
@@ -274,6 +344,6 @@ module.exports = function (grunt) {
 	 * A task for for a static server with a watch
 	 * run connect and watch
 	 */
-	grunt.registerTask("serve", ["connect", "watch"]);
+	grunt.registerTask("serve", ["connect", "copy", "assemble", "watch"]);
 
 };
