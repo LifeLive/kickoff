@@ -1,8 +1,8 @@
-![](http://f.cl.ly/items/3d0o1O190m0U443I0B1I/Screen%20Shot%202013-10-07%20at%2022.05.42.png)
+![](http://imgur.com/kwr16tO)
 
 # Kickoff Statix
 
-Kickoff Statix aims to make the process of writing basic HTML templates quick and easy.
+Kickoff Statix aims to make the process of creating static HTML templates quick and easy.
 
 Using a tiny subset of what Assemble is capable of, creating much more maintainable front-end templates becomes simple.
 
@@ -29,9 +29,9 @@ If you're using Kickoff Statix we'd love to hear about it; please e-mail us at l
 
 
 ## Demos and documentation
-Please visit [tmwagency.github.io/statix/](http://tmwagency.github.io/statix/) all demos and documentation for Kickoff.
+Please visit [tmwagency.github.io/kickoff/](http://tmwagency.github.io/kickoff/) for all demos and documentation for Kickoff, or [assemble.io/docs/](http://assemble.io/docs/) for Assemble documentation.
 
-## How to use Grunt
+## Using Grunt
 * Install Node from [nodejs.org](http://nodejs.org/)
 * Install Grunt CLI - `npm install -g grunt-cli`
 * Install Sass globally - `sudo gem install sass --pre`. [Ruby](https://www.ruby-lang.org/en/) v2 is needed. Update using [rvm](http://rvm.io/), [brew](http://brew.sh) (if you use a Mac) or from [ruby-lang.org/en/downloads/](https://www.ruby-lang.org/en/downloads/) then install the packages below
