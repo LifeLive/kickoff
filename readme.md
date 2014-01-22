@@ -30,6 +30,19 @@ If you're using Kickoff Statix we'd love to hear about it; please e-mail us at l
 * A setup based on [Assemble](http://assemble.io/), and [Grunt](http://gruntjs.com/), it gives you the power of using a templating language (such as Handlebars), and the flexibility of being able to write content using Markdown.
 * Integrated with [Kickoff](http://tmwagency.github.io/kickoff/) - a minimal front-end framework developed at [TMW](http://www.tmw.co.uk/)
 
+## Using your own framwork
+
+Don't want to use Kickoff?  We won't be offended.
+
+The framework is setup so that you can do this very easily.
+
+### To replace the SCSS
+Delete the files in the SCSS folder, replacing them with your framework of choice.
+
+Next, go into the `Gruntfile.js` in the root of the project and change all references of `kickoff.scss` and `kickoff.css` to whatever you have decided to call your main SCSS file.
+
+Finally, change the reference to the compiled CSS file in the `html_start.hbs` in `src/templates/includes`
+
 
 ## Demos and documentation
 Please visit [tmwagency.github.io/kickoff/](http://tmwagency.github.io/kickoff/) for all demos and documentation for Kickoff, or [assemble.io/docs/](http://assemble.io/docs/) for Assemble documentation.
