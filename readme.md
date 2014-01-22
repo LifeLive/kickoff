@@ -2,7 +2,7 @@
 
 # Kickoff Statix
 
-Statix aims to make the process of writing basic HTML templates quick and easy.
+Kickoff Statix aims to make the process of writing basic HTML templates quick and easy.
 
 Using a tiny subset of what Assemble is capable of, creating much more maintainable front-end templates becomes simple.
 
@@ -18,8 +18,6 @@ If you're using Kickoff Statix we'd love to hear about it; please e-mail us at l
 
 [![devDependency Status](https://david-dm.org/tmwagency/kickoff/dev-status.png)](https://david-dm.org/tmwagency/kickoff#info=devDependencies) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tmwagency/kickoff/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-
-### Usage
 
 
 ### Features
