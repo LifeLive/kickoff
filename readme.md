@@ -1,4 +1,4 @@
-![](http://imgur.com/kwr16tO)
+![](http://i.imgur.com/kwr16tO.jpg)
 
 # Kickoff Statix
 
