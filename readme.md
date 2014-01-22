@@ -2,17 +2,31 @@
 
 # Kickoff Statix
 
+Statix aims to make the process of writing basic HTML templates quick and easy.
+
+Using a tiny subset of what Assemble is capable of, creating much more maintainable front-end templates becomes simple.
+
+It also integrates in a minimal front-end framework, [Kickoff](http://tmwagency.github.io/kickoff/), which you can build on top of, or if you would rather, completely replace, with your own CSS and JS structure.
+
+
 Developed and maintained by [Ashley Nolan](https://github.com/dragongraphics) & [Zander Martineau](https://github.com/mrmartineau)
+
+[Assemble](https://github.com/assemble/assemble) developed and maintained by [Jon Schlinkert](https://github.com/jonschlinkert) and [Brian Woodward](github/doowb).
+
 
 If you're using Kickoff Statix we'd love to hear about it; please e-mail us at labs@tmw.co.uk
 
 [![devDependency Status](https://david-dm.org/tmwagency/kickoff/dev-status.png)](https://david-dm.org/tmwagency/kickoff#info=devDependencies) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tmwagency/kickoff/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
+
+### Usage
+
+
 ### Features
 
-* A quick and flexible way of developing static HTML templates
-* Built using [Assemble](http://assemble.io/), and [Grunt](http://gruntjs.com/), it gives you the power of using a templating language (such as the default, Handlebars), and the flexibility of being able to write content using Markdown
-* Built on top of [Kickoff](http://tmwagency.github.io/kickoff/) - a minimal front-end framework developed at TMW
+* A quick and flexible setup to help when developing static HTML templates
+* A setup based on [Assemble](http://assemble.io/), and [Grunt](http://gruntjs.com/), it gives you the power of using a templating language (such as Handlebars), and the flexibility of being able to write content using Markdown.
+* Integrated with [Kickoff](http://tmwagency.github.io/kickoff/) - a minimal front-end framework developed at [TMW](http://www.tmw.co.uk/)
 
 
 ## Demos and documentation
