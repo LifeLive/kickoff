@@ -4,16 +4,18 @@
 
 Kickoff Statix aims to make the process of creating static HTML templates quick and easy.
 
-Using a tiny subset of what Assemble is capable of, creating much more maintainable front-end templates becomes simple.
+It is primarily a simple setup of [Assemble](https://github.com/assemble/assemble), a static template generator, integrated with our minimal front-end framework, [Kickoff](http://tmwagency.github.io/kickoff/) and a few handy [Grunt](http://gruntjs.com/) setup tasks.
 
-It also integrates in a minimal front-end framework, [Kickoff](http://tmwagency.github.io/kickoff/), which you can build on top of, or if you would rather, completely replace, with your own CSS and JS structure.
+Combined, this gives you a framework that allows the creation of much more maintainable, flexible front-end templates with virtually no setup required.
+
+Should you wish to rip out the CSS (or SCSS) and JS and replace it with a structure or framework you feel more comfortable with, that is also very easy with small changes to the project setup.
 
 
 ### Credits
 
-Developed and maintained by [Ashley Nolan](https://github.com/dragongraphics) & [Zander Martineau](https://github.com/mrmartineau)
+Developed by [Ashley Nolan](https://github.com/dragongraphics) & [Zander Martineau](https://github.com/mrmartineau).
 
-[Assemble](https://github.com/assemble/assemble) developed and maintained by [Jon Schlinkert](https://github.com/jonschlinkert) and [Brian Woodward](github/doowb).
+Uses the static site generator [Assemble](https://github.com/assemble/assemble), which is developed and maintained by [Jon Schlinkert](https://github.com/jonschlinkert) and [Brian Woodward](github/doowb).
 
 If you're using Kickoff Statix we'd love to hear about it; please e-mail us at labs@tmw.co.uk
 
@@ -24,6 +26,7 @@ If you're using Kickoff Statix we'd love to hear about it; please e-mail us at l
 ## Features
 
 * A quick and flexible setup to help when developing static HTML templates
+* Get up and running writing templated web pages in a matter of minutes.  No config to get in your way unless you want to build in more complex Assemble functionality
 * A setup based on [Assemble](http://assemble.io/), and [Grunt](http://gruntjs.com/), it gives you the power of using a templating language (such as Handlebars), and the flexibility of being able to write content using Markdown.
 * Integrated with [Kickoff](http://tmwagency.github.io/kickoff/) - a minimal front-end framework developed at [TMW](http://www.tmw.co.uk/)
 
