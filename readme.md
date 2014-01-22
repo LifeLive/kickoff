@@ -54,7 +54,7 @@ There is also a Yeoman generator for Kickoff, visit [tmwagency.github.io/kickoff
 
 Don't want to use Kickoff?  We won't be offended.
 
-The framework is setup so that you can do this very easily.
+Statix is setup so that you can do this very easily.
 
 
 ### To replace the SCSS
